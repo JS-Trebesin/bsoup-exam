@@ -1,0 +1,46 @@
+body {
+    min-height: 100vh;
+    font-family: monospace;
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    margin: 1.5em auto;
+    font-size: 3rem;
+}
+
+.stuff {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+}
+
+.help {
+    position: fixed;
+    font-family: inherit;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: salmon;
+    top: 1.5em;
+    right: 1.5em;
+}
+
+.container {
+    border: 2px solid red;
+    width: 60vw;
+    height: 60vh;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pak {
+    position: fixed;
+    top: 1.5em;
+    left: 1.5em;
+    height: 7em;
+}
