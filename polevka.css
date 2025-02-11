@@ -31,7 +31,8 @@ h1 {
 }
 
 .container {
-    border: 2px solid red;
+    border: 2px solid salmon;
+    border-radius: 10px;
     width: 60vw;
     height: 60vh;
     position: relative;
