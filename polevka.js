@@ -11,36 +11,30 @@ const randomStuff = [
 
 const helpBtn = document.querySelector(".help")
 const container = document.querySelector(".container")
+const allH = document.querySelectorAll("h2")
 
 helpBtn.addEventListener("click", () => {
-    const allH = document.querySelectorAll("h2")
-
     allH.forEach((h) => {
         console.log(h.textContent)
         ingredience.forEach((i) => {
             console.log(i)
             if (h.textContent === i) {
                 h.style.color = "deeppink"
+                h.style.backgroundColor = "white"
+                h.style.paddingInline = "10px"
+                h.style.borderRadius = "5px"
             }
         })
     })
 })
 
-ingredience.forEach((stuff) => {
-    const newH = document.createElement("h2")
-    newH.innerText = stuff
-    newH.classList.add("stuff")
-    newH.style.left = `${Math.floor(Math.random() * 70)}%`
-    newH.style.top = `${Math.floor(Math.random() * 70)}%`
-    newH.style.zIndex = "1"
-    container.append(newH)
-})
-
-randomStuff.forEach((stuff) => {
-    const newH = document.createElement("h2")
-    newH.innerText = stuff
-    newH.classList.add("stuff")
-    newH.style.left = `${Math.floor(Math.random() * 70)}%`
-    newH.style.top = `${Math.floor(Math.random() * 70)}%`
-    container.append(newH)
+allH.forEach((h) => {
+    h.style.left = `${Math.floor(Math.random() * 70)}%`
+    h.style.top = `${Math.floor(Math.random() * 70)}%`
+    ingredience.forEach((i) => {
+        console.log(i)
+        if (h.textContent === i) {
+            h.style.zIndex = 1
+        }
+    })
 })
